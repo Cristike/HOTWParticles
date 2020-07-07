@@ -28,6 +28,9 @@ public class particleremove implements CommandExecutor {
                                 Main.hasparticle.remove(p.getUniqueId());
                                 player.sendMessage(Main.c(plugin.getConfig().getString("ParticlesRemoved")));
                             }
+                            else {
+                                player.sendMessage(Main.c(plugin.getConfig().getString("NoParticles")));
+                            }
                         }
                     }
                     else {

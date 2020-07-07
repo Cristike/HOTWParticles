@@ -9,3 +9,4 @@ AlreadySetted: '&cThis player has already particles'
 ParticlesRemoved: '&aYou have removed the particles of this player'
 UnknownCommand: '&cThis is not a valid command syntax'
 NoPerm: "You don't have the permission to do this"
+NoParticles: "This player doesen't have any particles"
