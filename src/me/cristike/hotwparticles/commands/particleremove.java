@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 public class particleremove implements CommandExecutor {
-    Plugin plugin = Main.getPlugin(Main.class);
+    private Plugin plugin = Main.getPlugin(Main.class);
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -32,6 +32,7 @@ public class particleremove implements CommandExecutor {
                                 player.sendMessage(Main.c(plugin.getConfig().getString("NoParticles")));
                             }
                         }
+                        else player.sendMessage(Main.c(plugin.getConfig().getString("InvalidPlayer")));
                     }
                     else {
                         player.sendMessage(Main.c(plugin.getConfig().getString("UnknownCommand")));
