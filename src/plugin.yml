@@ -1,0 +1,10 @@
+name: 'HOTWParticles'
+author: Cristike
+version: '1.0'
+main: me.cristike.hotwparticles.Main
+api-version: '1.16'
+commands:
+  particleset:
+    description: 'Set particles'
+  particleremove:
+    description: 'Remove particles'
