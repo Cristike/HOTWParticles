@@ -3,6 +3,7 @@ package me.cristike.hotwparticles;
 import me.cristike.hotwparticles.commands.particleremove;
 import me.cristike.hotwparticles.commands.particleset;
 import me.cristike.hotwparticles.events.onDeath;
+import me.cristike.hotwparticles.events.onJoin;
 import me.cristike.hotwparticles.events.onQuit;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -62,6 +63,7 @@ public class Main extends JavaPlugin {
     private void loadEvents() {
         Bukkit.getServer().getPluginManager().registerEvents(new onDeath(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new onQuit(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new onJoin(), this);
     }
 
     public static String c (String mess) {
