@@ -7,6 +7,7 @@ import me.cristike.hotwparticles.events.onQuit;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
+import org.bukkit.Particle;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ import java.util.UUID;
 public class Main extends JavaPlugin {
     public static ArrayList<UUID> hasparticle = new ArrayList<>();
 
+    public static HashMap<UUID, Particle> lastParticle = new HashMap<>();
+    public static HashMap<UUID, Color> LastColor = new HashMap<>();
     public static HashMap<String, Color> getColors() {
         HashMap<String, Color> colors = new HashMap<>();
         colors.put("AQUA", Color.AQUA);

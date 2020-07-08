@@ -25,6 +25,10 @@ public class particleremove implements CommandExecutor {
                         Player p = Bukkit.getServer().getPlayer(args[0]);
                         if (p != null && p.isOnline()) {
                             if (Main.hasparticle.contains(p.getUniqueId())) {
+                                if (Main.LastColor.containsKey(p.getUniqueId())) {
+                                    Main.LastColor.remove(p.getUniqueId());
+                                }
+                                Main.lastParticle.remove(p.getUniqueId());
                                 Main.hasparticle.remove(p.getUniqueId());
                                 player.sendMessage(Main.c(plugin.getConfig().getString("ParticlesRemoved")));
                             }

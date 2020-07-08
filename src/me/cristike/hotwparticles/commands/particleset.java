@@ -45,6 +45,7 @@ public class particleset implements CommandExecutor {
                                     else {
                                         Main.hasparticle.add(target.getUniqueId());
                                         Particle finalParticle = particle;
+                                        Main.lastParticle.put(target.getUniqueId(), finalParticle);
                                         player.sendMessage(Main.c(plugin.getConfig().getString("ParticleSetted")));
                                         new BukkitRunnable() {
                                             @Override
@@ -105,6 +106,8 @@ public class particleset implements CommandExecutor {
                                         else {
                                             Particle finalParticle = particle;
                                             Color finalColor = color;
+                                            Main.lastParticle.put(target.getUniqueId(), finalParticle);
+                                            Main.LastColor.put(target.getUniqueId(), finalColor);
                                             Main.hasparticle.add(target.getUniqueId());
                                             player.sendMessage(Main.c(plugin.getConfig().getString("ParticleSetted")));
                                             new BukkitRunnable() {
